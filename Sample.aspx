@@ -24,6 +24,9 @@
         <br />
         <br />
         <asp:Button ID="Button3" runat="server" Text="De" meta:resourcekey="Button3Resource1" OnClick="Button3_Click" />
+        <br />
+        <br />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Fr" />
     </form>
 </body>
 </html>

@@ -53,14 +53,19 @@ namespace LocalizationTest
         }
         protected void Button3_Click(object sender, EventArgs e)
         {
-            System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "alert('Language changed to DE')", true);
+            //System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "alert('Language changed to DE')", true);
             ChangeLanguage("de-DE");
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "alert('Language changed to EN')", true);
+            //System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "alert('Language changed to EN')", true);
             ChangeLanguage("en-US");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage("fr-FR");
         }
     }
 }
