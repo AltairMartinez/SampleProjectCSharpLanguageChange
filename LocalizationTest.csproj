@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LocalizationTest</RootNamespace>
     <AssemblyName>LocalizationTest</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -25,6 +25,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +35,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,15 +44,22 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommonMark, Version=0.1.0.0, Culture=neutral, PublicKeyToken=001ef8810438905d, processorArchitecture=MSIL">
+      <HintPath>packages\CommonMark.NET.0.9.0\lib\net45\CommonMark.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -60,6 +69,23 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Westwind.Globalization, Version=2.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Westwind.Globalization.2.12.0\lib\net45\Westwind.Globalization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Westwind.Globalization.Web, Version=2.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Westwind.Globalization.Web.2.12.1\lib\net45\Westwind.Globalization.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Westwind.Utilities, Version=2.67.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Westwind.Utilities.2.67.2\lib\net45\Westwind.Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Westwind.Web, Version=2.66.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Westwind.Web.2.66\lib\net45\Westwind.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
@@ -67,7 +93,125 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="LocalizationAdmin\app\app.js" />
+    <Content Include="LocalizationAdmin\app\createClassController.js" />
+    <Content Include="LocalizationAdmin\app\headerController.js" />
+    <Content Include="LocalizationAdmin\app\importExportResxController.js" />
+    <Content Include="LocalizationAdmin\app\listController.js" />
+    <Content Include="LocalizationAdmin\app\localizationservice.js" />
+    <Content Include="LocalizationAdmin\app\resourceController.js" />
+    <Content Include="LocalizationAdmin\app\resourceProviderInfoController.js" />
+    <Content Include="LocalizationAdmin\app\translateController.js" />
+    <Content Include="LocalizationAdmin\bower_components\angular-sanitize\angular-sanitize.js" />
+    <Content Include="LocalizationAdmin\bower_components\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="LocalizationAdmin\bower_components\angular-sanitize\index.js" />
+    <Content Include="LocalizationAdmin\bower_components\angular\angular-csp.css" />
+    <Content Include="LocalizationAdmin\bower_components\angular\angular.js" />
+    <Content Include="LocalizationAdmin\bower_components\angular\angular.min.js" />
+    <Content Include="LocalizationAdmin\bower_components\angular\index.js" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\js\npm.js" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\Gruntfile.js" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\package.js" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\.gitignore" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\css\font-awesome.css" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\css\font-awesome.min.css" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="LocalizationAdmin\bower_components\jquery\dist\jquery.js" />
+    <Content Include="LocalizationAdmin\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="LocalizationAdmin\bower_components\jquery\MIT-LICENSE.txt" />
+    <Content Include="LocalizationAdmin\bower_components\lodash\LICENSE.txt" />
+    <Content Include="LocalizationAdmin\bower_components\lodash\lodash.js" />
+    <Content Include="LocalizationAdmin\bower_components\lodash\lodash.min.js" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\angular-file-upload-all.js" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\angular-file-upload-all.min.js" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\angular-file-upload-shim.js" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\angular-file-upload-shim.min.js" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\angular-file-upload.js" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\angular-file-upload.min.js" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\FileAPI.flash.swf" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\FileAPI.min.js" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\ng-file-upload-all.js" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\ng-file-upload-all.min.js" />
+    <Content Include="LocalizationAdmin\css\localizationAdmin.css" />
+    <Content Include="LocalizationAdmin\favicon.ico" />
+    <Content Include="LocalizationAdmin\images\vsizegrip.png" />
+    <Content Include="LocalizationAdmin\images\Westwind.Localization_128.png" />
+    <Content Include="LocalizationAdmin\index.html" />
+    <Content Include="LocalizationAdmin\LocalizationService.ashx" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\README.md" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\npm-debug.log" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\ng-file-upload\.bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\lodash\bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\lodash\.bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\jquery\dist\jquery.min.map" />
+    <Content Include="LocalizationAdmin\bower_components\jquery\bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\jquery\.bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\css\font-awesome.css.map" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\.npmignore" />
+    <Content Include="LocalizationAdmin\bower_components\font-awesome\.bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\README.md" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\package.json" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\bootstrap\.bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\angular\README.md" />
+    <Content Include="LocalizationAdmin\bower_components\angular\package.json" />
+    <Content Include="LocalizationAdmin\bower_components\angular\bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\angular\angular.min.js.map" />
+    <Content Include="LocalizationAdmin\bower_components\angular\angular.min.js.gzip" />
+    <Content Include="LocalizationAdmin\bower_components\angular\.bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\angular-sanitize\README.md" />
+    <Content Include="LocalizationAdmin\bower_components\angular-sanitize\package.json" />
+    <Content Include="LocalizationAdmin\bower_components\angular-sanitize\bower.json" />
+    <Content Include="LocalizationAdmin\bower_components\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="LocalizationAdmin\bower_components\angular-sanitize\.bower.json" />
+    <Content Include="LocalizationAdmin\bower.json" />
+    <Content Include="Properties\AmericanFlag.png" />
+    <Content Include="Properties\FrenchFlag.png" />
+    <Content Include="Properties\GermanFlag.png" />
+    <Content Include="ResourceTest.aspx" />
+    <Content Include="_readme.Westwind.Globalization.html" />
+    <None Include="LocalizationAdmin\scripts\_references.js" />
+    <Content Include="LocalizationAdmin\Partials\AddResourceDialog.html" />
+    <Content Include="LocalizationAdmin\Partials\CommentDialog.html" />
+    <Content Include="LocalizationAdmin\Partials\CreateClassDialog.html" />
+    <Content Include="LocalizationAdmin\Partials\ImportExportResxDialog.html" />
+    <Content Include="LocalizationAdmin\Partials\Menubar.html" />
+    <Content Include="LocalizationAdmin\Partials\RenameResourceDialog.html" />
+    <Content Include="LocalizationAdmin\Partials\ResourceEditor.html" />
+    <Content Include="LocalizationAdmin\Partials\ResourceGrid.html" />
+    <Content Include="LocalizationAdmin\Partials\ResourceList.html" />
+    <Content Include="LocalizationAdmin\Partials\ResourceProviderInfoDialog.html" />
+    <Content Include="LocalizationAdmin\Partials\ResourceSetList.html" />
+    <Content Include="LocalizationAdmin\Partials\TranslateDialog.html" />
+    <Content Include="LocalizationAdmin\scripts\ww.angular.js" />
+    <Content Include="LocalizationAdmin\scripts\ww.jquery.js" />
+    <Content Include="LocalizationAdmin\scripts\ww.jquery.min.js" />
+    <Content Include="LocalizationAdmin\scripts\ww.resourceEditor.js" />
+    <Content Include="LocalizationAdmin\touch-icon.png" />
     <Content Include="Sample.aspx" />
+    <Content Include="Scripts\ww.jquery.js" />
+    <Content Include="Scripts\ww.jquery.min.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -81,6 +225,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="ResourceTest.cshtml_renamed" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -129,6 +274,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
     <Compile Include="Sample.aspx.cs">
       <DependentUpon>Sample.aspx</DependentUpon>
     </Compile>
@@ -158,6 +304,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\Sample.aspx.de.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\LocalizationForm.de.resx" />
+    <EmbeddedResource Include="Properties\LocalizationForm.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
