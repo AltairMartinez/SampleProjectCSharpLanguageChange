@@ -1,2 +1,6 @@
 .vs/LocalizationTest/v14/.suo
 obj/Debug/DesignTimeResolveAssemblyReferences.cache
+bin/LocalizationTest.pdb
+obj/Debug/LocalizationTest.csproj.FileListAbsolute.txt
+obj/Debug/LocalizationTest.csproj.GenerateResource.Cache
+obj/Debug/LocalizationTest.csprojResolveAssemblyReference.cache
