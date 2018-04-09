@@ -14,7 +14,6 @@ namespace LocalizationTest
         public static string m_currentLanguage
         {
             get {
-                i
                 return (string)HttpContext.Current.Session["m_currentLanguage"] ?? "";
             }
             set {
