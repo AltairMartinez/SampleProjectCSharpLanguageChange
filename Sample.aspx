@@ -12,7 +12,7 @@
     
     </div>
     <asp:Button ID="Button1" runat="server" meta:resourcekey="Button1Resource1" 
-        Text="English Button" />
+        Text="English Button Altair" />
     <p>
         <asp:Label ID="Label1" runat="server" meta:resourcekey="Label1Resource1" 
             Text="English Label"></asp:Label>
