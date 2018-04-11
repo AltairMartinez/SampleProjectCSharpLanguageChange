@@ -8,6 +8,22 @@ using System.Web.UI.WebControls;
 
 namespace LocalizationTest
 {
+    public class TestableClass
+    {
+        /// <summary>stores the selected EonPage enum, used for exception purpose</summary>
+        public string m_currentLanguage
+        {
+            get
+            {
+                return m_currentLanguage;
+            }
+            set
+            {
+                m_currentLanguage = value;
+            }
+        }
+    }
+
     public class SessionBase
     {
         /// <summary>stores the selected EonPage enum, used for exception purpose</summary>
