@@ -13,6 +13,7 @@ namespace LocalizationTest
         /// <summary>stores the selected EonPage enum, used for exception purpose</summary>
         public static string m_currentLanguage
         {
+            1
             get {
                 return (string)HttpContext.Current.Session["m_currentLanguage"] ?? "";
             }
