@@ -6,6 +6,7 @@ using System.Web;
 
 namespace LocalizationTest.UnitTest
 {
+    [TestFixture]
     public class SampleTestCases
     {
         [TestCase]
