@@ -12,20 +12,18 @@ namespace LocalizationTest.UnitTest
         [TestCase]
         public void TestOne()
         {
-            TestableClass testSample = new TestableClass();
-            testSample.m_currentLanguage = "zh";
+            //TestableClass testSample = new TestableClass();
+            //testSample.m_currentLanguage = "zh";
 
-            Assert.AreEqual("zh", testSample.m_currentLanguage);
+            TestableClass.currentLanguage = "zh";
+            Assert.AreEqual("zh", TestableClass.currentLanguage);
         }
 
-        //[TestCase]
-        //public void TestTwo()
-        //{
-        //    TestableClass testSample = new TestableClass();
-        //    testSample.m_currentLanguage = "booby";
-
-        //    Assert.AreEqual("booby", testSample.m_currentLanguage);
-        //}
-
+        [TestCase]
+        public void TestTwo()
+        {
+            TestableClass.currentLanguage = "jp";// "CHINESE";
+            Assert.AreEqual("jp", TestableClass.currentLanguage);
+        }
     }
 }
