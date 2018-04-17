@@ -36,7 +36,6 @@ namespace LocalizationTest
         protected override void InitializeCulture()
         {
             String m_currentLanguage = SessionBase.m_currentLanguage;
-            1
             if (m_currentLanguage!="")
             {
                 UICulture = m_currentLanguage;
