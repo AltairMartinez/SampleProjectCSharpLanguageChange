@@ -1,0 +1,11 @@
+{
+  "Id": "6ff17ba1-48a6-4d65-8a1e-f24762f22f58",
+  "Name": "Covers changes to: Horoscope. Script created at 2018-04-23 17:38.",
+  "ObjectIds": [
+    {
+      "Name": "Horoscope",
+      "Owner": "dbo",
+      "ObjectType": "Table"
+    }
+  ]
+}
