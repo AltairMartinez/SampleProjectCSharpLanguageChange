@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
 using System.Web;
@@ -29,8 +31,45 @@ namespace LocalizationTest
 
     public partial class Sample : System.Web.UI.Page
     {
+        /// <summary>delivers the db connection string</summary>
+        /// <returns>db connection string</returns>
+        public string GetConnectionString()
+        {
+            string datasource = ConfigurationManager.AppSettings["DatabaseInstance"];
+            string connectionString = @"Data Source=" + datasource + @";Initial Catalog=LocalizationTest;User ID=admin;Password=eon1234;Connection Timeout=60";
+            return connectionString;
+        }
+
+        /// <summary>executes insert statements with an identity value</summary>
+        /// <param name="sqlStatement">insert query statement</param>
+        /// <returns>number of the identity value</returns>
+        public string GetHoroscope()
+        {
+            string testQuery = "SELECT daily FROM Horoscope where language='"+ SessionBase.m_currentLanguage + "'";
+            SqlConnection myConnection = new SqlConnection(GetConnectionString());
+            try
+            {
+                SqlCommand command = new SqlCommand(testQuery, myConnection);
+                command.Connection.Open();
+                object scalar = command.ExecuteScalar();
+                return Convert.ToString(scalar);
+            }
+            catch (Exception ex)
+            {
+                return "";
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (SessionBase.m_currentLanguage != "")
+            {
+                horoscope.Text = GetHoroscope();
+            }
         }
 
         protected override void InitializeCulture()

@@ -28,5 +28,8 @@
         <br />
         <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Fr" />
     </form>
+        <br />
+        <br />
+    <asp:Label ID="horoscope" runat="server"> Horoscope Of The Day </asp:Label>
 </body>
 </html>
