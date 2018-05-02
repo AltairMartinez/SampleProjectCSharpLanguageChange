@@ -1,0 +1,42 @@
+<package>
+  <metadata>
+    <id>LocalizationTest</id>
+    <version>1.0.63</version>
+    <authors>Altair</authors>
+    <owners>EON Reality</owners>
+    <tags>OctopusDeploy</tags>
+    <licenseUrl>https://www.eonreality.com/certificateauthority/</licenseUrl>
+    <projectUrl>https://www.eonreality.com/certificateauthority/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The LocalizationTest deployment package, built on 2/5/2018</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\About.aspx" target="About.aspx" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Account\ChangePassword.aspx" target="Account\ChangePassword.aspx" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Account\ChangePasswordSuccess.aspx" target="Account\ChangePasswordSuccess.aspx" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Account\Login.aspx" target="Account\Login.aspx" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Account\Register.aspx" target="Account\Register.aspx" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Sample.aspx" target="Sample.aspx" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Styles\Site.css" target="Styles\Site.css" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Default.aspx" target="Default.aspx" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Global.asax" target="Global.asax" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Scripts\jquery-1.4.1-vsdoc.js" target="Scripts\jquery-1.4.1-vsdoc.js" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Scripts\jquery-1.4.1.js" target="Scripts\jquery-1.4.1.js" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Scripts\jquery-1.4.1.min.js" target="Scripts\jquery-1.4.1.min.js" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Web.config" target="Web.config" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Web.Debug.config" target="Web.Debug.config" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Web.Release.config" target="Web.Release.config" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Account\Web.config" target="Account\Web.config" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Site.Master" target="Site.Master" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\App_LocalResources\Sample.aspx.resx" target="App_LocalResources\Sample.aspx.resx" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\App_LocalResources\Sample.aspx.fr.resx" target="App_LocalResources\Sample.aspx.fr.resx" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\App_LocalResources\Sample.aspx.de.resx" target="App_LocalResources\Sample.aspx.de.resx" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\bin\LocalizationTest.dll.config" target="bin\LocalizationTest.dll.config" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\bin\LocalizationTest.dll" target="bin\LocalizationTest.dll" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\bin\LocalizationTest.pdb" target="bin\LocalizationTest.pdb" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\bin\nunit.framework.dll" target="bin\nunit.framework.dll" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\bin\nunit.framework.xml" target="bin\nunit.framework.xml" />
+    <file src="D:\TeamCity\buildAgent\work\a2ef8561a97cb751\Patch.sql" target="Patch.sql" />
+  </files>
+</package>
