@@ -22,8 +22,8 @@ BEGIN
 	SET IDENTITY_INSERT [dbo].[Horoscope] ON 
 	INSERT [dbo].[Horoscope] ([ID], [daily], [language]) VALUES (1, N'You are lucky today', N'en-US')
 	INSERT [dbo].[Horoscope] ([ID], [daily], [language]) VALUES (2, N'There''s no German translation yet!', N'de-DE')
-	--INSERT [dbo].[Horoscope] ([ID], [daily], [language]) VALUES (3, N'I dont know Korean too', N'ko-KR')
-	--INSERT [dbo].[Horoscope] ([ID], [daily], [language]) VALUES (4, N'There should be French too', N'fr-FR')
+	INSERT [dbo].[Horoscope] ([ID], [daily], [language]) VALUES (3, N'I dont know Korean too', N'ko-KR')
+	INSERT [dbo].[Horoscope] ([ID], [daily], [language]) VALUES (4, N'There should be French too', N'fr-FR')
 	SET IDENTITY_INSERT [dbo].[Horoscope] OFF
 
 END

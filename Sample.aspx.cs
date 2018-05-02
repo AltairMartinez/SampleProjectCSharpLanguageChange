@@ -36,7 +36,9 @@ namespace LocalizationTest
         public string GetConnectionString()
         {
             string datasource = ConfigurationManager.AppSettings["DatabaseInstance"];
-            string connectionString = @"Data Source=" + datasource + @";Initial Catalog=LocalizationTest;User ID=admin;Password=eon1234;Connection Timeout=60";
+            string username = ConfigurationManager.AppSettings["UserName"];
+            string password = ConfigurationManager.AppSettings["Password"];
+            string connectionString = @"Data Source=" + datasource + @";Initial Catalog=LocalizationTest;User ID="+ username + @";Password="+ password + @";Connection Timeout=60";
             return connectionString;
         }
 
