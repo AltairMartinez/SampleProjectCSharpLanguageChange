@@ -9,7 +9,7 @@ namespace LocalizationTest.UnitTest
     [TestFixture]
     public class SampleTestCases_DEV
     {
-        [TestCase]
+        [TestCase, Category("PreDeploy")]
         public void TestOne()
         {
             //TestableClass testSample = new TestableClass();
@@ -19,26 +19,21 @@ namespace LocalizationTest.UnitTest
             Assert.AreEqual("zh", TestableClass.currentLanguage);
         }
 
-        [TestCase]
+        [TestCase, Category("PreDeploy")]
         public void TestTwo()
         {
             TestableClass.currentLanguage = "jp";// "CHINESE";
             Assert.AreEqual("jp", TestableClass.currentLanguage);
         }
 
-        [TestCase]
+        [TestCase, Category("PreDeploy")]
         public void TestThree()
         {
             TestableClass.currentLanguage = "";// "CHINESE";
             Assert.AreEqual("", TestableClass.currentLanguage);
         }
 
-    }
-
-    [TestFixture]
-    public class SampleTestCases_SMOKE
-    {
-        [TestCase]
+        [TestCase, Category("PostDeploy")]
         public void TestOneSmoke()
         {
             //TestableClass testSample = new TestableClass();
@@ -48,19 +43,13 @@ namespace LocalizationTest.UnitTest
             Assert.AreEqual("zh", TestableClass.currentLanguage);
         }
 
-        [TestCase]
+        [TestCase, Category("PostDeploy")]
         public void TestTwoSmoke()
         {
             TestableClass.currentLanguage = "jp";// "CHINESE";
             Assert.AreEqual("jp", TestableClass.currentLanguage);
         }
 
-        [TestCase]
-        public void TestThreeSmoke()
-        {
-            TestableClass.currentLanguage = "";// "CHINESE";
-            Assert.AreEqual("", TestableClass.currentLanguage);
-        }
-
     }
+
 }
