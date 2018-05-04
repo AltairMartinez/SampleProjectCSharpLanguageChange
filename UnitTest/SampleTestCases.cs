@@ -7,7 +7,7 @@ using System.Web;
 namespace LocalizationTest.UnitTest
 {
     [TestFixture]
-    public class SampleTestCases_DEV
+    public class SampleTestCases
     {
         [TestCase, Category("PreDeploy")]
         public void TestOne()
@@ -33,6 +33,20 @@ namespace LocalizationTest.UnitTest
             Assert.AreEqual("", TestableClass.currentLanguage);
         }
 
+
+
+    }
+
+    [TestFixture]
+    public class SampleTestCases_SMOKETEST
+    {
+        [TestCase, Category("PreDeploy")]
+        public void TestFour()
+        {
+            TestableClass.currentLanguage = "";// "CHINESE";
+            Assert.AreEqual("", TestableClass.currentLanguage);
+        }
+
         [TestCase, Category("PostDeploy")]
         public void TestOneSmoke()
         {
@@ -49,7 +63,6 @@ namespace LocalizationTest.UnitTest
             TestableClass.currentLanguage = "jp";// "CHINESE";
             Assert.AreEqual("jp", TestableClass.currentLanguage);
         }
-
     }
 
 }
