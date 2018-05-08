@@ -77,6 +77,20 @@ namespace LocalizationTest.UnitTest
             TestableClass.currentLanguage = "jp";// "CHINESE";
             Assert.AreEqual("jp", TestableClass.currentLanguage);
         }
+
+        [TestCase, Category("PostDeploy")]
+        public void TestFiveSmoke()
+        {
+            TestableClass.currentLanguage = "jp";// "CHINESE";
+            Assert.AreEqual("jp", TestableClass.currentLanguage);
+        }
+
+        [TestCase, Category("PostDeploy")]
+        public void TestSixSmoke()
+        {
+            TestableClass.currentLanguage = "jp";// "CHINESE";
+            Assert.AreEqual("jp", TestableClass.currentLanguage);
+        }
     }
 
 }
